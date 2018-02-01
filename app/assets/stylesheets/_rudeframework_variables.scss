@@ -1,0 +1,100 @@
+/* Scss Document */
+
+/*
+
+RUDE FRAMEWORK VARIABLES
+
+Commonly change bootstrap and custom variables.
+
+*/
+
+/* TYPOGRAPHY */
+
+$body-font: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$headline-font: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+$base-font-size:1.125rem;
+$line-height:1.5;
+
+/* COLORS */
+
+$black:#211D1D;
+$gray:#939598;
+$white:#fcfcfc;
+
+$red:#EF4444;
+$red-light:lighten($red,15%);
+$red-medium:$red;
+$red-dark:darken($red,15%);
+
+$green:#93C83E;
+$green-light:lighten($green,15%);
+$green-medium:$green;
+$green-dark:darken($green,15%);
+
+$cyan:#55B8E8;
+$cyan-light:lighten($cyan,15%);
+$cyan-medium:$cyan;
+$cyan-dark:darken($cyan,15%);
+
+$blue:#547CBE;
+$blue-light:lighten($blue,15%);
+$blue-medium:$blue;
+$blue-dark:darken($blue,15%);
+
+$yellow:#F7DD43;
+$yellow-light:lighten($yellow,15%);
+$yellow-medium:$yellow;
+$yellow-dark:darken($yellow,15%);
+
+$orange:#FBB040;
+$orange-light:lighten($orange,15%);
+$orange-medium:$orange;
+$orange-dark:darken($orange,15%);
+
+$brown:#5f4637;
+
+$purple:#904799;
+$purple-light:lighten($purple,15%);
+$purple-medium:$purple;
+$purple-dark:darken($purple,15%);
+
+/* LAYOUT */
+
+/* max device widths */
+
+// mobile menu
+
+//$small-device-width: 1024px;
+
+// navbar menu
+
+//$medium-device-width: 1280px;
+//$large-device-width: 1440px;
+//$extralarge-device-width: 1920px;
+
+/* spacing */
+
+$base-spacing: 1rem; // 1rem = $base-font-size
+//$base-spacing-small: $base-spacing * 0.5;
+//$base-spacing-large: $base-spacing * 2;
+
+/* header */
+
+// $logo-position:; // available locations
+$logo-width: 128px;
+$logo-height: 128px;
+
+/* nav */
+
+/* $nav-background:; */
+
+/* footer */
+
+$footer-logo-width:128px;
+$footer-logo-height:auto;
+
+/* $footer-background:; */
+
+/* Custom Boostrap Variables */
+

@@ -1,0 +1,67 @@
+<% unless @people.empty? %>
+
+<div class="navbar nav p-0 my-3">
+  <%= link_to new_person_path, class: 'btn btn-success btn-sm ml-auto' do %>
+    <i class="fa fa-plus"></i> Add person
+  <% end %>
+</div>
+
+<hr class="border-dark my-3">
+
+<div class="my-5">
+
+  <% @people.each do |person| %>
+
+    <div class="card border-secondary my-4">
+      <div class="card-body row mx-0 px-0">
+      
+        <div class="col">
+          <div>
+            <span class="d-block font-headline">
+              <span class="small">
+                <i class="far fa-dot-circle fa-sm align-text-top text-muted"></i>
+              </span>
+              <span class="lead"><%= person.firstname %> <%= person.lastname %></span></span>
+          </div>
+        </div>
+        <div class="col-auto flex-column card border-top-0 border-bottom-0 border-right-0">
+          <div class="mb-2">
+            <%= link_to person, class: "btn btn-sm btn-info" do %>
+              <i class="fa fa-fw fa-eye fa-sm "></i>
+            <% end %>
+          </div>
+          <div class="mb-2">
+            <%= link_to edit_person_path(person), class: "btn btn-sm btn-primary" do %>
+              <i class="fa fa-fw fa-pencil fa-sm"></i>
+            <% end %>
+          </div>
+          <div>
+            <%= link_to person, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm" do %>
+            <i class="far fa-fw fa-trash fa-sm text-danger"></i>
+            <% end %>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+
+    <% end %>
+
+  <% else %>
+
+    <div class="alert alert-info p-4">
+      <span class="d-block text-center mb-3 lead">There are currently no people in your database.</span>
+      <span class="d-block text-center">
+        <%= link_to new_person_path, class: 'btn btn-success' do %>
+          <i class="fa fa-plus"></i> Add person
+        <% end %>
+      </span>
+    </div>
+
+  <% end %>
+
+</div>
+
+<%= link_to new_person_path, class: 'btn btn-success' do %>
+  <i class="fa fa-plus"></i> Add person
+<% end %>

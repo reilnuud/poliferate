@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  <%= render "layouts/inc/head" %>
+
+  <body id="rf" class="bg-dark">
+
+    <!-- Main Content -->
+
+    <div class="bg-dark">
+
+      <div class="container py-5">
+        <div class="row mt-3 mt-md-4 mt-lg-5">
+          <div class="col-6 col-sm-5 col-md-4 col-lg-3 mx-auto text-center">
+            <%= image_tag "poliferate_logo.svg", :class => "w-100" %>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-10 col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto">
+            <%= form_for(:user, :url => session_path(:user)) do |f| %>
+              <%= f.text_field :email, placeholder: "email", class: "mb-4" %>
+              <%= f.password_field :password, placeholder: "password", class: "mb-4" %>
+              <%= f.check_box :remember_me, class: "d-none" %>
+              <%= f.label :remember_me, class: "d-none" %>
+              <%= button_tag( :class => "btn btn-danger btn-block mb-2") do %>
+                Sign in <i class="far fa-arrow-circle-right fa-sm"></i>
+              <% end %>
+              <div class="small text-center">
+                <%= link_to "forgot your password?", new_password_path(:user), class: "small d-block text-danger" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Javascript -->
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </body>
+</html>

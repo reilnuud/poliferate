@@ -1,0 +1,59 @@
+<% unless @organizations.empty? %>
+
+<div class="navbar nav p-0 my-3">
+  <%= link_to new_organization_path, class: 'btn btn-success btn-sm ml-auto' do %>
+    <i class="fa fa-plus"></i> Add Organization
+  <% end %>
+</div>
+
+<hr class="border-dark my-3">
+
+<% @organizations.each do |organization| %>
+
+  <div class="card my-4">
+    <div class="card-body row">
+    
+      <div class="col">
+        <div>
+          <span class="d-block font-headline lead"><%= organization.name %></span>
+        </div>
+      </div>
+      <div class="col-auto flex-column">
+        <div class="mb-1">
+          <%= link_to organization, class: "btn btn-sm btn-info" do %>
+            <i class="fa fa-fw fa-eye fa-sm "></i>
+          <% end %>
+        </div>
+        <div class="mb-1">
+          <%= link_to edit_organization_path(organization), class: "btn btn-sm btn-primary" do %>
+            <i class="fa fa-fw fa-pencil fa-sm"></i>
+          <% end %>
+        </div>
+        <div>
+          <%= link_to organization, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm" do %>
+          <i class="far fa-fw fa-trash fa-sm text-danger"></i>
+          <% end %>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+  <% end %>
+
+  <%= link_to new_organization_path, class: 'btn btn-success' do %>
+    <i class="fa fa-plus"></i> Add Organization
+  <% end %>
+
+<% else %>
+
+  <div class="alert alert-info p-4">
+    <span class="d-block text-center mb-3 lead">There are currently no organizations in your database.</span>
+    <span class="d-block text-center">
+      <%= link_to new_organization_path, class: 'btn btn-success' do %>
+        <i class="fa fa-plus"></i> Add Organization
+      <% end %>
+    </span>
+  </div>
+
+<% end %>

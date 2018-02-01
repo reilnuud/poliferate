@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <%= render "layouts/inc/head" %>
+
+  <body id="rf">
+
+    <%= render "layouts/inc/header" %>
+
+    <%= render "layouts/inc/alert" %>
+
+	  <!-- Main Content -->
+
+    <div class="bg-white">
+
+  	  <div class="container py-5">
+  	    <%= yield %>
+  	  </div>
+
+    </div>
+
+	  <!-- Footer -->
+
+    <%= render "layouts/inc/footer" %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </body>
+</html>
